@@ -152,7 +152,7 @@ int send_buffer(unsigned char* data, int len, int mode) {
         int size = i + 1 < packets ? 0x800 : last;
         sizesent+=size;
         dprintf("Sending packet %d of %d (0x%08x of 0x%08x bytes)", i+1, packets, sizesent, len);
-        if (mode == 1) {
+        if (mode == RecoveryMode) {
             if(libusb_bulk_transfer(device, 0x04, &data[i * 0x800],size ,&bytes,1000) < 0){
                 dprintf("Error when sending packet.");
                 return EXIT_FAILURE;

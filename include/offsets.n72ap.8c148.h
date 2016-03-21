@@ -46,7 +46,7 @@
 #define TARGET_BDEV_LIST                  (0x19B00)
 
 // Image offsets
-#define TARGET_IMAGE_LIST                 (0x1DE40)
+#define TARGET_IMAGE_LIST                 (0x17950)
 
 // Filesystem offsets
 //#define TARGET_FS_MOUNT                   (0x0)
